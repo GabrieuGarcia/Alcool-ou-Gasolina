@@ -14,7 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/gasolinaalcool" />
+        android:src="@drawable/gasolinaalcool"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:paddingLeft="37dp"
@@ -36,18 +39,21 @@
         android:layout_height="1dp"
         android:background="#FFFFFF"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/titulo" />
+        android:layout_below="@+id/titulo"
+        android:id="@+id/view" />
 
     <LinearLayout
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:paddingLeft="37dp"
-        >
+        android:id="@+id/linearLayout">
 
         <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/textInputPrecoAlcool"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +65,7 @@
                 android:inputType="numberDecimal"
                 android:hint="Preço do Álcool"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/precoAlcoolId"
                 android:textColor="#ffffff"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -67,6 +73,7 @@
 
         <android.support.design.widget.TextInputLayout
 
+            android:id="@+id/textInputPrecoGasolina"
             android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,12 +85,36 @@
             android:inputType="numberDecimal"
             android:hint="Preço da Gasolina"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/precoGasolinaId"
             android:textColor="#ffffff"/>
 
         </android.support.design.widget.TextInputLayout>
 
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:text="VERIFICAR"
+        android:background="#2c982c"
+        android:textColor="#ffffff"
+        android:id="@+id/botaoVerificarId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textoresultadoId"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/view"
+        android:layout_alignStart="@+id/view"
+        android:textColor="#ffffff" />
 
 
 </RelativeLayout>
